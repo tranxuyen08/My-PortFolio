@@ -1,8 +1,8 @@
-import { Container } from 'react-bootstrap';
-import { AiOutlineLink, AiFillGithub } from 'react-icons/ai';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-import './CSS/Projects.css';
-import allProjects from '../assets/Routes/AllProject';
+import { Container } from "react-bootstrap";
+import { AiOutlineLink, AiFillGithub } from "react-icons/ai";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import "./CSS/Projects.css";
+import allProjects from "../assets/Routes/AllProject";
 console.log(allProjects);
 function Projects() {
   return (
@@ -22,7 +22,10 @@ function Projects() {
         <div className="projects-wrapper animate__animated animate__fadeIn animate_slower my-4">
           <div className="row custom-margin-bottom">
             {allProjects.map((project) => (
-              <div className="col-4 project-col" key={project.id}>
+              <div
+                className="col-lg-4 col-md-6 col-sm-12 project-col"
+                key={project.id}
+              >
                 <div className="project-card">
                   <div className="imgsec">
                     <img src={project.img} alt={project.title} loading="lazy" />
@@ -34,7 +37,7 @@ function Projects() {
                       <AiOutlineLink className="project-icon" />
                       &nbsp;&nbsp;Website
                     </a> */}
-                    {project.websiteUrl !== '' ? (
+                    {project.websiteUrl !== "" ? (
                       project.maintenence === true ? (
                         <a
                           className="btn-maintenence btn"
@@ -56,7 +59,7 @@ function Projects() {
                         </a>
                       )
                     ) : (
-                      ''
+                      ""
                     )}
                     <a
                       className="btn-github"
